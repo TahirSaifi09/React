@@ -9,7 +9,7 @@ export default function Hooks(){
     // }
 
     const increase =() =>{
-        setCount(count + 2)
+        setCount(count + 1)
     }
     return(
         <div className="bg-black h-screen w-screen">
