@@ -11,6 +11,12 @@ export default function Hooks(){
         color:"Green"
     })
 
+    const [inputValue, setInputValue]=useState("Tahir")
+    const onChange=(event)=>{
+        const newval=event.target.value;
+        setInputValue(newval)
+    }
+
     
     // function increase(){
     //     setCount(count + 1)
@@ -30,6 +36,11 @@ export default function Hooks(){
                 <h1>This is {car.brand} car.</h1>
                 <p>It is a {car.color} {car.model} from {car.year}</p>
             </div>
+            <div>
+                <h1>{inputValue}</h1>
+                <input type="text" value={inputValue} placeholder="type anything..." onChange={onChange}/>
+            </div>
+
         </div>
     )
 }
